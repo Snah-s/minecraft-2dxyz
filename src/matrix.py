@@ -23,4 +23,3 @@ def create_matrix():
         matrix[i][j] = str(j)
   matrix[0][0] = '    '
   return matrix
-

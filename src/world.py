@@ -5,9 +5,7 @@ def assign_color(world, rows, cols, color):
     for j in cols:
       world[i][j] = color
 
-def create_world():
-  world = create_matrix()
-  
+def create_world(world):
   # Zones
   Sun = [([1,3], range(28, 31)), ([2], range(27, 32)),([4], [27,29,31])]
   Bedrock = [(range(14,21), range(1, 42))]
@@ -31,5 +29,3 @@ def create_world():
     assign_color(world, i, j, red)
   for i,j in stone:
     assign_color(world, i, j, lightblack)
-
-  return world
