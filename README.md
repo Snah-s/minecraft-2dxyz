@@ -29,4 +29,4 @@ First to run the game you need to run the file main.py. Then you have to type `i
 
 ## Blocks :bricks:
 
-![Alt text](image.png)
+![Alt text](images/image.png)
