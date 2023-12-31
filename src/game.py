@@ -36,22 +36,25 @@ def game():
   wood = 0
   stone = 0
 
+  it = 0
+  
   create_world(world)
   init_player(world, x, y)
   
-  prompt = input()
+  prompt = input("$ ")
 
   while prompt != 'init':
     prompt = input("$ ")
 
+  print("$ Welcome to the minecraft 2d xyz world".center(120))
   print_world(world,mv)
   while prompt != 'exit':
-    prompt = input("Ingrese un comando: ")
+    tempW = world
+    prompt = input("$ ")
     if prompt == 'exit':
       break
     option = finalCommands(prompt)
-    world, x, y, mv, wood, stone = actions(world, mv, option, x, y, wood, stone)
-    print(x, y)
+    world, mv, option, x,y, it, wood, stone = actions(world, mv, option, x,y, it, wood, stone)
     print_world(world, mv)
 
 
